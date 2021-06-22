@@ -1,356 +1,287 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Monsieur+La+Doulaise&display=swap");
 
+/* E8C547 30323D 4D5061 */
+
+:root {
+  --primary: #30323D;
+  --secondary:  #4D5061;
+  --tertiary: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--tertiary);
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-top: 0px;
+  z-index: 99;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    font-family: new walt disney ui;
-    background-color: #485461;
-    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
-    color: #ffffff;
-    font-size: 100px;
-    height: 100vh;
+  padding: 0 15px;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: rgb(240, 240, 240);
+  /*   font-family: 'Courgette', cursive;
+ */
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    background-color: rgb(53, 53, 53);
-    height: 50px;
-    padding-right: 50px;
+  height: 10vh;
 }
 
-nav li {
-    display: inline-block;
-    margin: 10px;
-    padding: 5px;
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  /* margin-left: auto; */
 }
 
-li a {
-    color: #dbdbdb;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    padding: 15px;
-}
-
-ul li a:hover {
-    color: #ffffff;
-    background-color: #000000;
-}
-
-#title blockquote {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    /* margin: 4%; */
-    /* padding: 1%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    color: #ffffff;
-}
-
-#title h2 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    /* margin: 4%; */
-    /* padding: 1%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    color: #ffffff;
-}
-
-#title h3 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    /* margin: 4%; */
-    /* padding: 1%; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    color: #ffffff;
-}
-
-#title blockquote {
-    font-weight: bold;
-   font-style: italic;
-   font-size: 30px;
-   line-height: 1;
-   margin: 2px;
-   padding: 28% 2% 2% 2%;
-}
-
-#title h2 {
-    font-size: 35px;
-    font-weight: normal;
-    line-height: 2;
-}
-
-#title h3 {
-    font-size: 35px;
-    font-weight: normal;
-    line-height: 2;
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 
 #title {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../images/K32.jpg');
-    background-size: cover;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
+  position: relative;
+  background-image: url("../images/K32.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  max-width: 100%;
 }
 
 #title::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#title blockquote,
+h1,
+h2 {
+  position: relative;
+  color: var(--tertiary);
+  text-align: center;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  top: 60%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#img-div {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+#image {
+  position: relative;
 }
 
 #image img {
-    height: 90vh;
-    width: 40vw;
-    border-radius: 90%;
-    display: block;
-    float: right;
-    margin-right: 15px;
-    margin-top: 30px;
-    /* margin-bottom: 10px; */
+  position: absolute;
+  left: 40%;
+  margin: 2% auto;
+  height: 60vh;
+  max-width: 100%;
+  border-radius: 50%;
 }
 
-#image-caption {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: flex-start;
-    text-align: left;
-    font-size: 38px;
-    margin-left: 20px;
-    margin-right: 10px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    color: #dbdbdb;
+#img-caption {
+  position: relative;
+  top: 80%;
+  transform: translate(0, -50%);
+  font-size: 20px;
+  text-align: justify;
+  padding: 40px;
 }
 
-#img-div  {
-    background-color: #363636;
+#tribute-info {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Set a background color */
-body {
-    background-color: #555555;
-    font-family: Helvetica, sans-serif;
+#tribute-info::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--secondary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #555555;
-    font-family: Helvetica,
-    sans-serif;
-
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: rgb(221, 221, 221);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
-
-/* Container around content */
 .container {
-    padding: 10px 50px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
 }
 
-/* The circles on the timeline */
 .container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: #61D4E8;
-    border: 4px solid #2DA1E7;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #fff;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-/* Place the container to the left */
 .left {
-    left: 0;
+  left: 0;
 }
 
-/* Place the container to the right */
 .right {
-    left: 50%;
+  left: 50%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
-    left: -16px;
+  left: -16px;
 }
 
-/* The actual content */
 .content {
-    padding: 20px 30px;
-    background-color: rgb(63, 63, 63);
-    color: #ffffff;
-    position: relative;
-    border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-
-    /* Place the timelime to the left */
-    .timeline::after {
-        left: 31px;
-    }
-
-    /* Full-width containers */
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-        left: 15px;
-    }
-
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
+  padding: 20px 30px;
+  background-color: var(--secondary);
+  position: relative;
+  border-radius: 6px;
 }
 
 #more {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    height: 100vh;
-    text-transform: uppercase;
-    letter-spacing: 2px; 
-    background-color: #2c2c2c;
+  height: 100vh;
+  position: relative;
 }
 
 #more h2 {
-    display:  block;
-    text-align: center;
-    line-height: 2;
-    margin: 8%;
-    color: #dbdbdb;
+  position: relative;
+  top: 20%;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+  font-size: 40px;
+  text-transform: uppercase;
+  vertical-align: center;
 }
 
-#more a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    letter-spacing: 2px;
-    text-align: center;
-    border: 2px solid white;
-    text-decoration: none;
-    padding: 30px;
-    margin:  2% 30%;
-    color: #ffffff;
-
+.button a {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  color: var(--tertiary);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin: 5px;
+  position: relative;
 }
 
-#more a:hover {
-    color: #000000;
-    background-color: #969696;
+.button1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.button2 {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.button1 a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.button2 a:hover {
+  background-color: #fff;
+  color: black;
 }
 
 footer {
-    height: 50px;
-    font-size: 20px;
-    padding: 10px 0px 0px 20px;
-    color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+  border-top: 2px solid var(--secondary);
+  text-align: center;
+  background-color: var(--secondary);
 }
 
 footer a {
-    text-decoration: none;
-    color: #ffffff;
+  color: var(--tertiary);
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 footer a:hover {
-    color: #f5ca3f;
+  color: #fff;
 }
+
